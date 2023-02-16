@@ -1,0 +1,38 @@
+:root {
+    --tea-rose-red: #e5c1bdff;
+    --bone: #d2d0baff;
+    --cambridge-blue: #7b9e87ff;
+    --paynes-gray: #5e747fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--cambridge-blue);
+    color: var(--bone);
+}
+
+.button {
+    position: absolute;
+    top: 50%;
+    left:  50%;
+    transform: translate(-50%, -50%);
+    padding: 8px 13px;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+    color: var(--bone);
+    background: var(--paynes-gray);
+    border: 2px solid var(--paynes-gray);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.button:hover {
+    border-color: var(--tea-rose-red);
+}

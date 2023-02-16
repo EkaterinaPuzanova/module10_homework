@@ -1,0 +1,131 @@
+:root {
+    --light: rgb(255, 255, 255);
+    --tea-rose-red: #e5c1bdff;
+    --bone: #d2d0baff;
+    --cambridge-blue: #7b9e87ff;
+    --paynes-gray: #5e747fff;
+}
+
+html {
+	scroll-behavior: smooth; 
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--cambridge-blue);
+    color: var(--bone);
+}
+
+@keyframes bounce {
+	0%, 20%, 60%, 100% {
+		transform: translateY(0);
+		transform: translateY(0);
+	}
+
+	40% {
+		transform: translateY(-5px);
+		transform: translateY(-5px);
+	}
+
+	80% {
+		transform: translateY(-2.5px);
+		transform: translateY(-2.5px);
+	}
+}
+
+.chat {
+    position: absolute;
+    top: 50%;
+    left:  50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 10px 0;
+    width: 450px;
+    height: 600px;
+    background: var(--light);
+    border-radius: 2px;
+    box-shadow: 4px 4px 4px 2px var(--paynes-gray);
+}
+
+.chat__form,
+.chat__messages {
+    margin: 0 10px;
+}
+
+.chat__form {
+    display: flex;
+    justify-content: space-between;
+}
+
+.chat__messages {
+    height: 100%;
+    padding-bottom: 10px;
+    overflow-y: auto;
+    border: 3px solid var(--paynes-gray);
+}
+
+.input {
+    width: 52%;
+    color: var(--paynes-gray);
+}
+
+.button,
+.input {
+    padding: 5px 7px;
+    font-size: 12px;
+    border: 3px solid var(--paynes-gray);
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.button {
+    color: var(--bone);
+    text-transform: uppercase;
+    background: var(--paynes-gray);
+    border-radius: 3px;
+}
+
+.button:hover {
+    border-color: var(--tea-rose-red);
+    animation: bounce .8s;
+}
+
+.chat__message {
+    width: 210px;
+    height: auto;
+    margin-top: 15px;
+    border: 3px solid var(--paynes-gray);
+    border-radius: 5px;
+    overflow-x: auto;
+}
+
+.chat__text {
+    padding: 5px;
+    color: var(--paynes-gray);
+}
+
+.left {
+    margin-left: 10px;
+    margin-right: auto;
+}
+
+.right {
+    margin-left: auto;
+    margin-right: 10px;
+}
+
+.link {
+    text-decoration: none;
+}
+
+.link-text {
+    color: var(--tea-rose-red);
+}
